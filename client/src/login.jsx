@@ -50,3 +50,6 @@ export default function Login() {
                             <span className='remember-me-span'>
                                 Remember me
                             </span>
+                        </div>
+                        <Link to='/register'> - Don't have an account?</Link>
+                    </div>
