@@ -29,3 +29,4 @@ export default function Login() {
                     <img className='logo-site' src={ImageL} />
                     <h1>Login</h1>
                     <div className='input-box'>
+                        <span className='icon'><i className="bi bi-envelope"></i></span>
