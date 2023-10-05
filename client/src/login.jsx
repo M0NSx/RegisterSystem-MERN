@@ -10,3 +10,4 @@ import axios from 'axios';
 export default function Login() {
 
     const [data, setData] = useState({
+        email: '',
