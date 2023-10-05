@@ -48,3 +48,4 @@ export default function Login() {
                                 className='remember-me'
                             />
                             <span className='remember-me-span'>
+                                Remember me
