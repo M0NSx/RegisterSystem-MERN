@@ -4,7 +4,6 @@ import ImageL from './img/Site-logo.png';
 import ImageBG from './img/BF-BG2.png';
 import { Link } from 'react-router-dom';
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
-import { useState } from 'react';
 
 export default function Register() {
 
@@ -30,19 +29,19 @@ export default function Register() {
                 <div className='input-box'>
                     <span className='icon'><i className="bi bi-person"></i></span>
                     <input type="text" name='nickname' placeholder='Nickname' required
-                    value={data.nickname} onChange={(e) = setData({...data, nickname: e.target.value})}
+                    value={data.nickname} onChange={(e) => setData({...data, nickname: e.target.value})}
                     />
                 </div>
                 <div className='input-box'>
                     <span className='icon'><i className="bi bi-envelope"></i></span>
                     <input type="email" name='email' placeholder='Email' required
-                    value={data.email} onChange={(e) = setData({...data, email: e.target.value})}
+                    value={data.email} onChange={(e) => setData({...data, email: e.target.value})}
                     />
                 </div>
                 <div className='input-box'>
                     <span className='icon'><i className="bi bi-key"></i></span>
                     <input type="password" name='password' placeholder='Password' required
-                    value={data.password} onChange={(e) = setData({...data, password: e.target.value})}
+                    value={data.password} onChange={(e) => setData({...data, password: e.target.value})}
                     />
                 </div>
                 <div id='settings-create' className="d-flex justify-content-between align-items-center">
@@ -52,9 +51,9 @@ export default function Register() {
                             name='rememberme'
                             className='remember-me'
                         />
-                            <span className='remember-me-span'>
-                                Remember me
-                            </span>
+                        <span className='remember-me-span'>
+                            Remember me
+                        </span>
                     </div>
                     <Link to='/login'>Already Have an account?</Link>
                 </div>
