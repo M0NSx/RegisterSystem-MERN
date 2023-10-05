@@ -33,3 +33,9 @@ export default function Register() {
                     value={data.nickname} onChange={(e) = setData({...data, nickname: e.target.value})}
                     />
                 </div>
+                <div className='input-box'>
+                    <span className='icon'><i className="bi bi-envelope"></i></span>
+                    <input type="email" name='email' placeholder='Email' required
+                    value={data.email} onChange={(e) = setData({...data, email: e.target.value})}
+                    />
+                </div>
