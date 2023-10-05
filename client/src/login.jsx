@@ -27,3 +27,5 @@ export default function Login() {
             <div className='container-box'>
                 <form onSubmit={loginUser} className='form'>
                     <img className='logo-site' src={ImageL} />
+                    <h1>Login</h1>
+                    <div className='input-box'>
