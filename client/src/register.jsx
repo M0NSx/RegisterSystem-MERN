@@ -7,3 +7,5 @@ import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
 import { useState } from 'react';
 
 export default function Register() {
+
+    const [data, setData] = useState({
