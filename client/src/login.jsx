@@ -35,3 +35,4 @@ export default function Login() {
                         />
                     </div>
                     <div className='input-box'>
+                        <span className='icon'><i className="bi bi-key"></i></span>
