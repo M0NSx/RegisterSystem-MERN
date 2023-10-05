@@ -47,3 +47,4 @@ export default function Login() {
                                 name='rememberme'
                                 className='remember-me'
                             />
+                            <span className='remember-me-span'>
