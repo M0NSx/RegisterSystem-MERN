@@ -15,3 +15,5 @@ export default function Register() {
     })
 
     const registerUser = (e) => {
+        e.preventDefault()
+    }
