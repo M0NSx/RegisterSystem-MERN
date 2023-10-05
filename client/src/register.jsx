@@ -45,3 +45,23 @@ export default function Register() {
                     value={data.password} onChange={(e) = setData({...data, password: e.target.value})}
                     />
                 </div>
+                <div id='settings-create' className="d-flex justify-content-between align-items-center">
+                    <div>
+                        <input
+                            type='checkbox'
+                            name='rememberme'
+                            className='remember-me'
+                        />
+                            <span className='remember-me-span'>
+                                Remember me
+                            </span>
+                    </div>
+                    <Link to='/login'>Already Have an account?</Link>
+                </div>
+                <button className='btn btn-primary'>Create</button>
+            </form>
+        </div>
+    </div>
+    </>
+  )
+}
