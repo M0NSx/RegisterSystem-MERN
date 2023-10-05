@@ -26,3 +26,4 @@ export default function Login() {
         <div className='container'>
             <div className='container-box'>
                 <form onSubmit={loginUser} className='form'>
+                    <img className='logo-site' src={ImageL} />
