@@ -39,3 +39,6 @@ export default function Login() {
                         <input type="password" name='password' placeholder='Password' required
                         value={data.password} onChange={(e) => setData({...data, password: e.target.value})}
                         />
+                    </div>
+                    <div id='settings-create' className="d-flex justify-content-between align-items-center">
+                        <div>
