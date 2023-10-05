@@ -53,3 +53,11 @@ export default function Login() {
                         </div>
                         <Link to='/register'> - Don't have an account?</Link>
                     </div>
+                    <button className='btn btn-primary'>Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </>
+  )
+}
