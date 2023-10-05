@@ -10,3 +10,4 @@ export default function Register() {
 
     const [data, setData] = useState({
         nickname: '',
+        email: '',
