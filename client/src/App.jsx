@@ -3,6 +3,10 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Dashboard from './dashbord'
 import Register from './register'
 import Login from './login'
+import axios from 'axios'
+
+axios.defaults.baseURL = 'http://localhost:8000'
+axios.defaults.withCredentials = true
 
 function App() {
 
