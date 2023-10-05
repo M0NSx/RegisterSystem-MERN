@@ -13,3 +13,5 @@ export default function Register() {
         email: '',
         password: '',
     })
+
+    const registerUser = (e) => {
