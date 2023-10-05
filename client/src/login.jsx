@@ -49,3 +49,4 @@ export default function Login() {
                             />
                             <span className='remember-me-span'>
                                 Remember me
+                            </span>
