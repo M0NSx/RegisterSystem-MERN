@@ -19,3 +19,17 @@ export default function Register() {
     }
 
   return (
+
+    <>
+    <img className='image-bf' src={ImageBG} />
+    <div className='container'>
+        <div className='container-box'>
+            <form onSubmit={registerUser} className='form'>
+                <img className='logo-site' src={ImageL} />
+                <h1>Register</h1>
+                <div className='input-box'>
+                    <span className='icon'><i className="bi bi-person"></i></span>
+                    <input type="text" name='nickname' placeholder='Nickname' required
+                    value={data.nickname} onChange={(e) = setData({...data, nickname: e.target.value})}
+                    />
+                </div>
