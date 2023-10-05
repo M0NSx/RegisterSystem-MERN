@@ -36,3 +36,6 @@ export default function Login() {
                     </div>
                     <div className='input-box'>
                         <span className='icon'><i className="bi bi-key"></i></span>
+                        <input type="password" name='password' placeholder='Password' required
+                        value={data.password} onChange={(e) => setData({...data, password: e.target.value})}
+                        />
