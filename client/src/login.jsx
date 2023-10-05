@@ -33,3 +33,5 @@ export default function Login() {
                         <input type="email" name='email' placeholder='Email' required
                         value={data.email} onChange={(e) => setData({...data, email: e.target.value})}
                         />
+                    </div>
+                    <div className='input-box'>
