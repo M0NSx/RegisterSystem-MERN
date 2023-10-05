@@ -25,3 +25,4 @@ export default function Login() {
         <img className='image-bf' src={ImageBG} />
         <div className='container'>
             <div className='container-box'>
+                <form onSubmit={loginUser} className='form'>
