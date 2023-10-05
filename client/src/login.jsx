@@ -18,3 +18,9 @@ export default function Login() {
         e.preventDefault()
         axios.get('/')
     }
+
+  return (
+    <>
+    <div>
+        <img className='image-bf' src={ImageBG} />
+        <div className='container'>
