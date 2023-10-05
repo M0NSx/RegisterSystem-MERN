@@ -13,3 +13,8 @@ export default function Login() {
         email: '',
         password: '',
     })
+
+    const loginUser = (e) => {
+        e.preventDefault()
+        axios.get('/')
+    }
