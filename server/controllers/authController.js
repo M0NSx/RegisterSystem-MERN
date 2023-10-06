@@ -9,6 +9,7 @@ const registerUser = async (req, res) => {
     try {
         const {nickname, email, password} = req.body;
         // Check if nickname was entered
+        if(!nickname) {
 
 
 
