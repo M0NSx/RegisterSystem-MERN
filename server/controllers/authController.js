@@ -15,6 +15,7 @@ const registerUser = async (req, res) => {
             })
         }
         // Check if password is good
+        if(!password || password.length < 6) {
 
 
 module.exports = {
