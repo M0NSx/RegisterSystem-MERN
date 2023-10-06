@@ -4,17 +4,38 @@ import ImageL from './img/Site-logo.png';
 import ImageBG from './img/BF-BG2.png';
 import { Link } from 'react-router-dom';
 import '../node_modules/bootstrap-icons/font/bootstrap-icons.css'
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import {toast} from 'react-hot-toast'
 
 export default function Register() {
 
+    const navigate = useNavigate()
     const [data, setData] = useState({
         nickname: '',
         email: '',
         password: '',
     })
 
-    const registerUser = (e) => {
+    const registerUser = async (e) => {
         e.preventDefault()
+
+        const {nickname, email, password} = data
+        try {
+            const {data} = await axios.post('/register', {
+                nickname, email, password
+            })
+
+            if(data.error) {
+                toast.error(data.error)
+            } else {
+                setData({})
+                toast.success('Login Successful')
+                navigate('/login')
+            }
+        } catch (error) {
+            console.log(error)
+        }
     }
 
   return (
@@ -28,19 +49,19 @@ export default function Register() {
                 <h1>Register</h1>
                 <div className='input-box'>
                     <span className='icon'><i className="bi bi-person"></i></span>
-                    <input type="text" name='nickname' placeholder='Nickname' required
+                    <input type="text" name='nickname' placeholder='Nickname'
                     value={data.nickname} onChange={(e) => setData({...data, nickname: e.target.value})}
                     />
                 </div>
                 <div className='input-box'>
                     <span className='icon'><i className="bi bi-envelope"></i></span>
-                    <input type="email" name='email' placeholder='Email' required
+                    <input type="email" name='email' placeholder='Email'
                     value={data.email} onChange={(e) => setData({...data, email: e.target.value})}
                     />
                 </div>
                 <div className='input-box'>
                     <span className='icon'><i className="bi bi-key"></i></span>
-                    <input type="password" name='password' placeholder='Password' required
+                    <input type="password" name='password' placeholder='Password'
                     value={data.password} onChange={(e) => setData({...data, password: e.target.value})}
                     />
                 </div>
