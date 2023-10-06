@@ -11,7 +11,9 @@ const registerUser = async (req, res) => {
         // Check if nickname was entered
         if(!nickname) {
             return res.json({
-
+                error: 'nickname is required'
+            })
+        }
 
 
 module.exports = {
