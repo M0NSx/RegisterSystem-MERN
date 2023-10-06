@@ -14,6 +14,7 @@ const registerUser = async (req, res) => {
                 error: 'nickname is required'
             })
         }
+        // Check if password is good
 
 
 module.exports = {
