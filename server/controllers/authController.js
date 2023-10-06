@@ -20,7 +20,11 @@ const registerUser = async (req, res) => {
                 error: 'password is required and has to be more than 6 caracters'
             })
         }
+        // Check email
 
+
+
+        
 module.exports = {
     test
 }
