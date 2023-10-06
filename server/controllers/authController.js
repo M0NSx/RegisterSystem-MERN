@@ -21,10 +21,55 @@ const registerUser = async (req, res) => {
             })
         }
         // Check email
-
-
-
+        const exists = await User.findOne({email})
         
+        if(exists) {
+            return res.json({
+                error: 'email already exists'
+            })
+        }
+
+        const hashedPassword = await hashPassword(password)
+        // Create user in database
+        const user = await User.create({
+            nickname,
+            email,
+            password: hashedPassword,
+        })
+
+        return res.json(user)
+    } catch (error) {
+        console.log(error)
+    }
+};
+
+const loginUser = async (req, res) => {
+    try {
+        const {email, password} = req.body;
+
+        const user = await User.findOne({email});
+        if(!user) {
+            return res.json({
+                error: 'invalid email'
+            })
+        }
+
+        const match = await comparePassword(password, user.password)
+        if(match) {
+            res.json('passwords match')
+        }
+        if(!match) {
+            res.json({
+                error: 'password do not match'
+            })
+        }
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 module.exports = {
-    test
+    test,
+    registerUser,
+    loginUser
 }
