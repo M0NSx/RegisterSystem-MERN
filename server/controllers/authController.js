@@ -6,7 +6,8 @@ const test = (req, res) => {
 }
 
 const registerUser = async (req, res) => {
-
+    try {
+        const {nickname, email, password} = req.body;
 
 
 
