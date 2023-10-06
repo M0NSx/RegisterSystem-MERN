@@ -10,6 +10,7 @@ const registerUser = async (req, res) => {
         const {nickname, email, password} = req.body;
         // Check if nickname was entered
         if(!nickname) {
+            return res.json({
 
 
 
