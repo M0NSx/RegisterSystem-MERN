@@ -1,9 +1,14 @@
-import React from 'react'
+import { useContext } from 'react';
+import { UserContext } from '../context/userContext';
 
-export default function Dashbord() {
+export default function Dashboard() {
+  const {user} = useContext(UserContext)
   return (
+    <>
     <div>
-      <h1>Hi</h1>
+      <h1>Dashboard</h1>
+      {!!user && (<h1> Welcome {user.nickname}!</h1>)}
     </div>
+    </>
   )
 }
